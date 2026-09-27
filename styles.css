@@ -9,6 +9,7 @@
   --serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --sans: 'Helvetica Neue', Helvetica, Arial, -apple-system, BlinkMacSystemFont, sans-serif;
 }
+.hero-photo{ width: 132px; height: 132px; border-radius: 50%; object-fit: cover; margin-bottom: 28px; border: 1px solid var(--rule); }
 
 *{ box-sizing: border-box; margin:0; padding:0; }
 

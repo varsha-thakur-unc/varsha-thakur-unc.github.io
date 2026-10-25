@@ -29,12 +29,14 @@
   .pf-label{ font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; margin-bottom: 6px; }
   .pf-text{ font-size: 16px; max-width: 62ch; margin-bottom: 24px; }
 
-  .pf-art{ display: flex; gap: 22px; align-items: center; background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; margin: 0 0 26px; }
-  .pf-thumb{ flex: 0 0 150px; height: 200px; border: 1px solid var(--rule); overflow: hidden; background: #fff; display: block; }
+  .pf-art{ display: grid; grid-template-columns: 215px 1fr; gap: 24px; align-items: center; background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; margin: 0 0 26px; }
+  .pf-art.no-img{ grid-template-columns: 1fr; }
+  .pf-thumb{ display: block; aspect-ratio: 16 / 10; border: 1px solid var(--rule); overflow: hidden; background: #fff; }
   .pf-thumb img{ display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
-  .pf-art-body{ flex: 1; min-width: 0; }
+  .pf-art-body{ min-width: 0; }
   .pf-art-type{ font-size: 13px; color: var(--ink-soft); margin-bottom: 12px; }
-  .pf-btn{ display: inline-block; font-size: 14px; font-weight: 500; color: var(--accent); text-decoration: none; border: 1px solid var(--accent); border-radius: 3px; padding: 9px 16px; margin: 0 10px 8px 0; }
+  .pf-btn{ display: block; text-align: center; font-size: 14px; font-weight: 500; color: var(--accent); text-decoration: none; border: 1px solid var(--accent); border-radius: 3px; padding: 9px 14px; margin: 0 0 8px; }
+  .pf-art.no-img .pf-btn{ display: inline-block; margin: 0 10px 8px 0; }
   .pf-btn:hover, .pf-btn:focus-visible{ background: var(--accent); color: var(--bg); }
   .pf-top{ font-size: 12.5px; color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); }
   .pf-top:hover, .pf-top:focus-visible{ color: var(--accent); border-bottom-color: var(--accent); }
@@ -47,8 +49,9 @@
   @media (max-width: 640px){
     .pf-menu a{ grid-template-columns: 22px 1fr; }
     .pf-menu-k{ display: none; }
-    .pf-art{ flex-direction: column; align-items: stretch; }
-    .pf-thumb{ flex: none; width: 100%; height: 230px; }
+    .pf-art{ grid-template-columns: 1fr; }
+    .pf-thumb{ order: -1; }
+    .pf-art.no-img .pf-btn, .pf-btn{ display: block; margin: 0 0 8px; }
     .pf-soon-row{ grid-template-columns: 1fr; gap: 4px; }
   }
 </style>
@@ -94,8 +97,7 @@
       <div class="pf-label">Introduction</div>
       <p class="pf-text">I wrote this post for the Duke-UNC Rotary Peace Center&#x27;s Summer 2026 AFE Blog Post Series, and it was published on June 22, 2026. It reflects on my summer at UNICEF&#x27;s Office of Internal Audit and Investigations and argues that AI cuts both ways for children. It can widen access to learning, but it also fuels harms such as sexualized deepfakes and privacy violations. I wrote it for current and prospective Rotary Peace Fellows and for readers who follow AI governance and child protection. My supervisor, my program director and another Peace Fellow all gave me positive feedback on it.</p>
 
-      <div class="pf-label">The artifact</div>
-      <div class="pf-art">
+      <div class="pf-art no-img" role="group" aria-label="Artifact">
         <div class="pf-art-body">
           <div class="pf-art-type">Blog post on the Rotary Peace Center website</div>
           <a class="pf-btn" href="https://rotarypeacecenternc.org/from-varsha-thakur-between-the-chamber-and-the-window-a-summer-at-unicef-and-the-work-of-protecting-children-in-both-the-real-and-the-digital-world/" target="_blank" rel="noopener">Read the post</a>
@@ -115,13 +117,12 @@
       <div class="pf-label">Introduction</div>
       <p class="pf-text">I designed and wrote this 17-page program proposal in Fall 2025 for PUBPOL 763, Introduction to Peace and Conflict Resolution. It proposes a community-based AI literacy and ethics intervention for Grades 6 to 9 in government schools in Bihar, India, delivered by teachers and locally hired youth trainers, with a stakeholder analysis, a theory of change and a measurement plan. It earned a High Pass. I later presented it as a poster at Duke and at the Rotary Annual Spring Conference, where many attendees said they would like to see it become a real project.</p>
 
-      <div class="pf-label">The artifact</div>
-      <div class="pf-art">
-        <a class="pf-thumb" href="Peace-Lab-AI-Literacy-Bihar.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="peace-lab-cover.jpg" alt="First page of the Peace Lab Project proposal, with the title and table of contents"></a>
+      <div class="pf-art" role="group" aria-label="Artifact">
         <div class="pf-art-body">
           <div class="pf-art-type">PDF, 17 pages</div>
           <a class="pf-btn" href="Peace-Lab-AI-Literacy-Bihar.pdf" target="_blank" rel="noopener">Open the PDF</a>
         </div>
+        <a class="pf-thumb" href="Peace-Lab-AI-Literacy-Bihar.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="peace-lab-cover.jpg" alt="Preview of the Peace Lab Project proposal"></a>
       </div>
 
       <div class="pf-label">Why it matters</div>
@@ -136,8 +137,7 @@
       <div class="pf-label">Introduction</div>
       <p class="pf-text">In Fall 2026 I designed and built this scenario-based course for anyone traveling for work. Learners spend their first days in a fictional country and make branching decisions as the security situation changes, then take a graded check at the end. I wrote the content and published the course from Articulate Rise 360 as a web course. It is a recent build, and I do not have usage data for it.</p>
 
-      <div class="pf-label">The artifact</div>
-      <div class="pf-art">
+      <div class="pf-art no-img" role="group" aria-label="Artifact">
         <div class="pf-art-body">
           <div class="pf-art-type">Web course built in Articulate Rise 360</div>
           <a class="pf-btn" href="safe-decisions/index.html" target="_blank" rel="noopener">Open the course</a>
@@ -156,14 +156,13 @@
       <div class="pf-label">Introduction</div>
       <p class="pf-text">I built AcademiaConnect in Spring 2026 for EDUC 761, Design of Emerging Technologies for Education. It is an app prototype that helps PhD students keep their papers in one library, draft with AI suggestions they can accept or decline, and find peers to collaborate with. I tested it with five users, four PhD students and one MEITE student, in think-aloud sessions of 15 to 25 minutes. All five described it as useful and needed for PhD work. They also found gaps, including unclear library labels and a message button that did nothing.</p>
 
-      <div class="pf-label">The artifact</div>
-      <div class="pf-art">
-        <a class="pf-thumb" href="academiaconnect-user-testing.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="academiaconnect-testing.jpg" alt="First page of the AcademiaConnect user testing report"></a>
+      <div class="pf-art" role="group" aria-label="Artifact">
         <div class="pf-art-body">
           <div class="pf-art-type">Working prototype and user testing report</div>
           <a class="pf-btn" href="https://academia-connect-one.vercel.app/" target="_blank" rel="noopener">Open the prototype</a>
           <a class="pf-btn" href="academiaconnect-user-testing.pdf" target="_blank" rel="noopener">Read the testing report</a>
         </div>
+        <a class="pf-thumb" href="academiaconnect-user-testing.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="academiaconnect-testing.jpg" alt="Preview of the AcademiaConnect prototype"></a>
       </div>
 
       <div class="pf-label">Why it matters</div>
@@ -178,13 +177,12 @@
       <div class="pf-label">Introduction</div>
       <p class="pf-text">This article ran as a Deep Dive feature in the March 2024 issue of NSDC Connect, the magazine of India&#x27;s National Skill Development Corporation. I wrote it while working at NewGlobe Education. It argues that generative AI can help education teams produce quality content at scale, for example a science textbook in about two months instead of six to eight. It also argues that teams need training in prompt engineering and that fact-checking and original thinking must stay with people. The issue&#x27;s editorial page lists me under special thanks.</p>
 
-      <div class="pf-label">The artifact</div>
-      <div class="pf-art">
-        <a class="pf-thumb" href="https://api1.nsdcindia.org/system/files/2025-07/07_March%202024_NSDC%20Connect_Innovation%20and%20HFIs.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="nsdc-article.jpg" alt="First page of the NSDC Connect article Towards a Brighter Future"></a>
+      <div class="pf-art" role="group" aria-label="Artifact">
         <div class="pf-art-body">
           <div class="pf-art-type">Magazine feature, pp. 21–23 of the issue. The PDF opens on NSDC&#x27;s site.</div>
           <a class="pf-btn" href="https://api1.nsdcindia.org/system/files/2025-07/07_March%202024_NSDC%20Connect_Innovation%20and%20HFIs.pdf" target="_blank" rel="noopener">Read the article</a>
         </div>
+        <a class="pf-thumb" href="https://api1.nsdcindia.org/system/files/2025-07/07_March%202024_NSDC%20Connect_Innovation%20and%20HFIs.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="nsdc-article.jpg" alt="Preview of the NSDC Connect article"></a>
       </div>
 
       <div class="pf-label">Why it matters</div>

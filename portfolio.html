@@ -3,8 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research and Projects &mdash; Varsha Thakur</title>
+<title>Research and Projects | Varsha Thakur</title>
+<meta name="description" content="Selected work by Varsha Thakur on AI literacy, child safety and learning design, with the artifact and a short note on each piece.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='17' fill='none' stroke='%237A2616' stroke-width='1.6'/%3E%3Cpath d='M10 13 L14 25 L18 13' fill='none' stroke='%237A2616' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 13 L30 13 M26 13 L26 25' fill='none' stroke='%237A2616' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
+<style>
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
+  h1.section-title{ font-family: var(--serif); font-weight: 700; font-size: 30px; margin-bottom: 12px; }
+  .pf-lede{ font-size: 16px; color: var(--ink-soft); max-width: 56ch; margin: -12px 0 30px; }
+
+  .pf-menu{ margin-bottom: 18px; }
+  .pf-menu-label{ font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; margin-bottom: 8px; }
+  .pf-menu ol{ list-style: none; border-bottom: 1px solid var(--rule); }
+  .pf-menu a{ display: grid; grid-template-columns: 28px 1fr auto; gap: 12px; align-items: baseline; padding: 11px 0; border-top: 1px solid var(--rule); color: var(--ink); text-decoration: none; font-size: 15px; }
+  .pf-menu a:hover, .pf-menu a:focus-visible{ color: var(--accent); }
+  .pf-menu-n{ color: var(--accent); font-weight: 600; }
+  .pf-menu-k{ font-size: 12.5px; color: var(--ink-soft); }
+
+  .pf-entry{ padding: 46px 0 34px; border-top: 1px solid var(--ink); margin-top: 34px; scroll-margin-top: 84px; }
+  .pf-kicker{ font-size: 12.5px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+  .pf-title{ font-family: var(--serif); font-size: 22px; font-weight: 700; line-height: 1.3; margin-bottom: 4px; }
+  .pf-sub{ font-size: 15px; color: var(--ink-soft); }
+  .pf-meta{ font-size: 12.5px; color: var(--ink-soft); margin: 6px 0 24px; }
+  .pf-label{ font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; margin-bottom: 6px; }
+  .pf-text{ font-size: 16px; max-width: 62ch; margin-bottom: 24px; }
+
+  .pf-art{ display: flex; gap: 22px; align-items: center; background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; margin: 0 0 26px; }
+  .pf-thumb{ flex: 0 0 150px; height: 200px; border: 1px solid var(--rule); overflow: hidden; background: #fff; display: block; }
+  .pf-thumb img{ display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .pf-art-body{ flex: 1; min-width: 0; }
+  .pf-art-type{ font-size: 13px; color: var(--ink-soft); margin-bottom: 12px; }
+  .pf-btn{ display: inline-block; font-size: 14px; font-weight: 500; color: var(--accent); text-decoration: none; border: 1px solid var(--accent); border-radius: 3px; padding: 9px 16px; margin: 0 10px 8px 0; }
+  .pf-btn:hover, .pf-btn:focus-visible{ background: var(--accent); color: var(--bg); }
+  .pf-top{ font-size: 12.5px; color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .pf-top:hover, .pf-top:focus-visible{ color: var(--accent); border-bottom-color: var(--accent); }
+
+  .pf-soon-row{ display: grid; grid-template-columns: 1fr 2fr; gap: 24px; padding: 18px 0; border-top: 1px solid var(--rule); }
+  .pf-soon-row:last-child{ border-bottom: 1px solid var(--rule); }
+  .pf-soon-name{ font-family: var(--serif); font-weight: 700; font-size: 17px; }
+  .pf-soon-desc{ font-size: 14.5px; color: var(--ink-soft); }
+
+  @media (max-width: 640px){
+    .pf-menu a{ grid-template-columns: 22px 1fr; }
+    .pf-menu-k{ display: none; }
+    .pf-art{ flex-direction: column; align-items: stretch; }
+    .pf-thumb{ flex: none; width: 100%; height: 230px; }
+    .pf-soon-row{ grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>
 </head>
 <body>
 
@@ -23,69 +70,139 @@
 
   <section id="work">
     <div class="section-num">02</div>
-    <h2 class="section-title">Research and Projects</h2>
+    <h1 class="section-title">Research and Projects</h1>
     <div class="title-rule"></div>
+    <p class="pf-lede">My portfolio. Five pieces of work, each with the artifact itself and a short note on what it is and why it matters.</p>
 
-    <div class="proj-row">
-      <div>
-        <div class="proj-tag">Program design</div>
-        <div class="proj-title">Peace Lab Project</div>
-        <div class="proj-desc">A full program execution write-up including a theory of change and modules on AI literacy and ethics.</div>
-        <div class="proj-meta">Peace Lab</div>
-      </div>
-      <div class="proj-visual">Image coming soon</div>
-    </div>
+    <nav class="pf-menu" id="portfolio-menu" aria-label="Portfolio entries">
+      <div class="pf-menu-label">Jump to an entry</div>
+      <ol>
+      <li><a href="#entry-1"><span class="pf-menu-n">1</span><span>Between the Chamber and the Window</span><span class="pf-menu-k">Published post</span></a></li>
+      <li><a href="#entry-2"><span class="pf-menu-n">2</span><span>Peace Lab Project</span><span class="pf-menu-k">Program design</span></a></li>
+      <li><a href="#entry-3"><span class="pf-menu-n">3</span><span>Making Safe Decisions in the Field</span><span class="pf-menu-k">Interactive course</span></a></li>
+      <li><a href="#entry-4"><span class="pf-menu-n">4</span><span>AcademiaConnect</span><span class="pf-menu-k">App prototype</span></a></li>
+      <li><a href="#entry-5"><span class="pf-menu-n">5</span><span>Towards a Brighter Future</span><span class="pf-menu-k">Published article</span></a></li>
+      <li><a href="#in-progress"><span class="pf-menu-n">+</span><span>RE4M and the capstone</span><span class="pf-menu-k">Coming soon</span></a></li>
+      </ol>
+    </nav>
 
-    <div class="proj-row">
-      <div>
-        <div class="proj-tag">In progress</div>
-        <div class="proj-title">RE4M Framework Paper</div>
-        <div class="proj-desc">A metacognitive framework addressing cognitive offloading in the context of AI use.</div>
-        <div class="proj-meta">Research paper</div>
-      </div>
-      <div class="proj-visual">Image coming soon</div>
-    </div>
+    <article class="pf-entry" id="entry-1" aria-labelledby="entry-1-title">
+      <div class="pf-kicker">1 &middot; Published post</div>
+      <h2 class="pf-title" id="entry-1-title">Between the Chamber and the Window</h2>
+      <div class="pf-meta">Duke-UNC Rotary Peace Center · June 22, 2026</div>
 
-    <div class="proj-row">
-      <div>
-        <div class="proj-tag">Coming soon</div>
-        <div class="proj-title">MEITE Capstone Project</div>
-        <div class="proj-meta">Capstone</div>
-      </div>
-      <div class="proj-visual">Image coming soon</div>
-    </div>
+      <div class="pf-label">Introduction</div>
+      <p class="pf-text">I wrote this post for the Duke-UNC Rotary Peace Center&#x27;s Summer 2026 AFE Blog Post Series, and it was published on June 22, 2026. It reflects on my summer at UNICEF&#x27;s Office of Internal Audit and Investigations and argues that AI cuts both ways for children. It can widen access to learning, but it also fuels harms such as sexualized deepfakes and privacy violations. I wrote it for current and prospective Rotary Peace Fellows and for readers who follow AI governance and child protection. My supervisor, my program director and another Peace Fellow all gave me positive feedback on it.</p>
 
-    <div class="proj-row">
-      <div>
-        <div class="proj-tag">Published</div>
-        <div class="proj-title">Between the Chamber and the Window</div>
-        <div class="proj-desc">A field reflection on AI governance, child safety, and institutional integrity, written from a summer inside UNICEF's Office of Internal Audit and Investigations.</div>
-        <div class="proj-meta">Rotary Peace Center AFE Blog, June 2026</div>
-        <a class="proj-link" href="https://rotarypeacecenternc.org/from-varsha-thakur-between-the-chamber-and-the-window-a-summer-at-unicef-and-the-work-of-protecting-children-in-both-the-real-and-the-digital-world/" target="_blank" rel="noopener">Read the piece</a>
+      <div class="pf-label">The artifact</div>
+      <div class="pf-art">
+        <div class="pf-art-body">
+          <div class="pf-art-type">Blog post on the Rotary Peace Center website</div>
+          <a class="pf-btn" href="https://rotarypeacecenternc.org/from-varsha-thakur-between-the-chamber-and-the-window-a-summer-at-unicef-and-the-work-of-protecting-children-in-both-the-real-and-the-digital-world/" target="_blank" rel="noopener">Read the post</a>
+        </div>
       </div>
-      <div class="proj-visual">Image coming soon</div>
-    </div>
 
-    <div class="proj-row">
-      <div>
-        <div class="proj-tag">Published</div>
-        <div class="proj-title">Towards a Brighter Future: Innovation and AI in the Education Sector</div>
-        <div class="proj-desc">A piece on innovation and AI in India's education sector, published in the National Skill Development Corporation's newsletter.</div>
-        <div class="proj-meta">NSDC Connect, Vol. 1, Issue 7 &middot; April 2025, pp. 21&ndash;23</div>
-        <a class="proj-link" href="https://api1.nsdcindia.org/system/files/2025-07/07_March%202024_NSDC%20Connect_Innovation%20and%20HFIs.pdf" target="_blank" rel="noopener">Read the PDF</a>
-      </div>
-      <div class="proj-visual">Image coming soon</div>
-    </div>
+      <div class="pf-label">Why it matters</div>
+      <p class="pf-text">This piece sets out the position I bring to AI governance work. Child safety has to be designed into AI systems from the start, not added once the technology already exists. It also asks the question I keep returning to, which is what we owe the people on the other end of the systems we build.</p>
+      <a class="pf-top" href="#portfolio-menu">Back to menu</a>
+    </article>
+    <article class="pf-entry" id="entry-2" aria-labelledby="entry-2-title">
+      <div class="pf-kicker">2 &middot; Program design</div>
+      <h2 class="pf-title" id="entry-2-title">Peace Lab Project</h2>
+      <div class="pf-sub">AI Literacy and Ethics in the Government Schools of Bihar, India</div>
+      <div class="pf-meta">PUBPOL 763 · Fall 2025 · 17 pages</div>
 
-    <div class="proj-row">
-      <div>
-        <div class="proj-tag">UX case study</div>
-        <div class="proj-title">AcademiaConnect</div>
-        <div class="proj-desc">A prototype exploring how peer connection can support PhD students, grounded in persona interviews, usability testing with PhD students at UNC, and research on the need for a healthier, more connected path through doctoral study.</div>
-        <div class="proj-meta">Figma prototype</div>
-        <a class="proj-link" href="https://academia-connect-one.vercel.app/" target="_blank" rel="noopener">View the prototype</a>
+      <div class="pf-label">Introduction</div>
+      <p class="pf-text">I designed and wrote this 17-page program proposal in Fall 2025 for PUBPOL 763, Introduction to Peace and Conflict Resolution. It proposes a community-based AI literacy and ethics intervention for Grades 6 to 9 in government schools in Bihar, India, delivered by teachers and locally hired youth trainers, with a stakeholder analysis, a theory of change and a measurement plan. It earned a High Pass. I later presented it as a poster at Duke and at the Rotary Annual Spring Conference, where many attendees said they would like to see it become a real project.</p>
+
+      <div class="pf-label">The artifact</div>
+      <div class="pf-art">
+        <a class="pf-thumb" href="Peace-Lab-AI-Literacy-Bihar.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="peace-lab-cover.jpg" alt="First page of the Peace Lab Project proposal, with the title and table of contents"></a>
+        <div class="pf-art-body">
+          <div class="pf-art-type">PDF, 17 pages</div>
+          <a class="pf-btn" href="Peace-Lab-AI-Literacy-Bihar.pdf" target="_blank" rel="noopener">Open the PDF</a>
+        </div>
       </div>
-      <div class="proj-visual">Image coming soon</div>
+
+      <div class="pf-label">Why it matters</div>
+      <p class="pf-text">The design assumes low connectivity. Only about 18.5 percent of Bihar&#x27;s schools have internet access, so activities run offline and in two languages, led by trainers from the community. It also links AI literacy to peacebuilding, drawing on field evidence that classroom teaching can reduce misinformation. It shows how I approach a problem from the last mile inward.</p>
+      <a class="pf-top" href="#portfolio-menu">Back to menu</a>
+    </article>
+    <article class="pf-entry" id="entry-3" aria-labelledby="entry-3-title">
+      <div class="pf-kicker">3 &middot; Interactive course</div>
+      <h2 class="pf-title" id="entry-3-title">Making Safe Decisions in the Field</h2>
+      <div class="pf-meta">Personal project · Articulate Rise 360 · Fall 2026</div>
+
+      <div class="pf-label">Introduction</div>
+      <p class="pf-text">In Fall 2026 I designed and built this scenario-based course for anyone traveling for work. Learners spend their first days in a fictional country and make branching decisions as the security situation changes, then take a graded check at the end. I wrote the content and published the course from Articulate Rise 360 as a web course. It is a recent build, and I do not have usage data for it.</p>
+
+      <div class="pf-label">The artifact</div>
+      <div class="pf-art">
+        <div class="pf-art-body">
+          <div class="pf-art-type">Web course built in Articulate Rise 360</div>
+          <a class="pf-btn" href="safe-decisions/index.html" target="_blank" rel="noopener">Open the course</a>
+        </div>
+      </div>
+
+      <div class="pf-label">Why it matters</div>
+      <p class="pf-text">The course turns rules into practice. Learners rehearse judgment calls in a safe setting, and a graded check shows whether the judgment holds. I wrote screen reader descriptions so more learners can take it, and a disclaimer states that the setting is fictional and the course is not official guidance. It shows how I design learning for decisions rather than recall.</p>
+      <a class="pf-top" href="#portfolio-menu">Back to menu</a>
+    </article>
+    <article class="pf-entry" id="entry-4" aria-labelledby="entry-4-title">
+      <div class="pf-kicker">4 &middot; App prototype</div>
+      <h2 class="pf-title" id="entry-4-title">AcademiaConnect</h2>
+      <div class="pf-meta">EDUC 761 · Spring 2026</div>
+
+      <div class="pf-label">Introduction</div>
+      <p class="pf-text">I built AcademiaConnect in Spring 2026 for EDUC 761, Design of Emerging Technologies for Education. It is an app prototype that helps PhD students keep their papers in one library, draft with AI suggestions they can accept or decline, and find peers to collaborate with. I tested it with five users, four PhD students and one MEITE student, in think-aloud sessions of 15 to 25 minutes. All five described it as useful and needed for PhD work. They also found gaps, including unclear library labels and a message button that did nothing.</p>
+
+      <div class="pf-label">The artifact</div>
+      <div class="pf-art">
+        <a class="pf-thumb" href="academiaconnect-user-testing.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="academiaconnect-testing.jpg" alt="First page of the AcademiaConnect user testing report"></a>
+        <div class="pf-art-body">
+          <div class="pf-art-type">Working prototype and user testing report</div>
+          <a class="pf-btn" href="https://academia-connect-one.vercel.app/" target="_blank" rel="noopener">Open the prototype</a>
+          <a class="pf-btn" href="academiaconnect-user-testing.pdf" target="_blank" rel="noopener">Read the testing report</a>
+        </div>
+      </div>
+
+      <div class="pf-label">Why it matters</div>
+      <p class="pf-text">Testing changed the design. I renamed the library sections to Uploaded papers and My notes &amp; Drafts, moved AI suggestions to the top of Writing Mode and enlarged the writing canvas. I treated a request for wellbeing tracking as out of scope for this version. The project shows how I let user evidence set priorities and keep scope in check.</p>
+      <a class="pf-top" href="#portfolio-menu">Back to menu</a>
+    </article>
+    <article class="pf-entry" id="entry-5" aria-labelledby="entry-5-title">
+      <div class="pf-kicker">5 &middot; Published article</div>
+      <h2 class="pf-title" id="entry-5-title">Towards a Brighter Future: Innovation and AI in the Education Sector</h2>
+      <div class="pf-meta">NSDC Connect · Vol. 1, Issue 7 · March 2024 · pp. 21–23</div>
+
+      <div class="pf-label">Introduction</div>
+      <p class="pf-text">This article ran as a Deep Dive feature in the March 2024 issue of NSDC Connect, the magazine of India&#x27;s National Skill Development Corporation. I wrote it while working at NewGlobe Education. It argues that generative AI can help education teams produce quality content at scale, for example a science textbook in about two months instead of six to eight. It also argues that teams need training in prompt engineering and that fact-checking and original thinking must stay with people. The issue&#x27;s editorial page lists me under special thanks.</p>
+
+      <div class="pf-label">The artifact</div>
+      <div class="pf-art">
+        <a class="pf-thumb" href="https://api1.nsdcindia.org/system/files/2025-07/07_March%202024_NSDC%20Connect_Innovation%20and%20HFIs.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="nsdc-article.jpg" alt="First page of the NSDC Connect article Towards a Brighter Future"></a>
+        <div class="pf-art-body">
+          <div class="pf-art-type">Magazine feature, pp. 21–23 of the issue. The PDF opens on NSDC&#x27;s site.</div>
+          <a class="pf-btn" href="https://api1.nsdcindia.org/system/files/2025-07/07_March%202024_NSDC%20Connect_Innovation%20and%20HFIs.pdf" target="_blank" rel="noopener">Read the article</a>
+        </div>
+      </div>
+
+      <div class="pf-label">Why it matters</div>
+      <p class="pf-text">It marks where my thinking on AI and education stood in early 2024, before my graduate work began. The gap it names is one I still work on, since about a quarter of rural 14 to 18 year olds cannot read a Grade 2 text, yet over 90 percent live in households with a smartphone.</p>
+      <a class="pf-top" href="#portfolio-menu">Back to menu</a>
+    </article>
+
+    <div class="pf-entry" id="in-progress" style="padding-bottom:0;">
+      <div class="pf-label">On the way</div>
+      <div class="pf-soon-row">
+        <div><div class="pf-kicker">In progress</div><div class="pf-soon-name">RE4M Framework Paper</div></div>
+        <div class="pf-soon-desc">A metacognitive framework addressing cognitive offloading in the context of AI use.</div>
+      </div>
+      <div class="pf-soon-row">
+        <div><div class="pf-kicker">Coming soon</div><div class="pf-soon-name">MEITE Capstone Project</div></div>
+        <div class="pf-soon-desc">Capstone</div>
+      </div>
+      <div style="margin-top:22px;"><a class="pf-top" href="#portfolio-menu">Back to menu</a></div>
     </div>
   </section>
 

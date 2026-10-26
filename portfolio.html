@@ -31,7 +31,7 @@
 
   .pf-art{ display: grid; grid-template-columns: 215px 1fr; gap: 24px; align-items: center; background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; margin: 0 0 26px; }
   .pf-art.no-img{ grid-template-columns: 1fr; }
-  .pf-thumb{ display: block; aspect-ratio: 16 / 10; border: 1px solid var(--rule); overflow: hidden; background: #fff; }
+  .pf-thumb{ display: block; aspect-ratio: 16 / 10; border: 1px solid var(--rule); overflow: hidden; background: #fff; font-size: 0; line-height: 0; color: transparent; text-decoration: none; }
   .pf-thumb img{ display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
   .pf-art-body{ min-width: 0; }
   .pf-art-type{ font-size: 13px; color: var(--ink-soft); margin-bottom: 12px; }
@@ -119,10 +119,11 @@
 
       <div class="pf-art" role="group" aria-label="Artifact">
         <div class="pf-art-body">
-          <div class="pf-art-type">PDF, 17 pages</div>
-          <a class="pf-btn" href="Peace-Lab-AI-Literacy-Bihar.pdf" target="_blank" rel="noopener">Open the PDF</a>
+          <div class="pf-art-type">Proposal (PDF, 17 pages) and conference poster</div>
+          <a class="pf-btn" href="Peace-Lab-AI-Literacy-Bihar.pdf" target="_blank" rel="noopener">Open the proposal</a>
+          <a class="pf-btn" href="Peace-Lab-Poster.pdf" target="_blank" rel="noopener">View the poster</a>
         </div>
-        <a class="pf-thumb" href="Peace-Lab-AI-Literacy-Bihar.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="peace-lab-cover.jpg" alt="Preview of the Peace Lab Project proposal"></a>
+        <a class="pf-thumb" href="Peace-Lab-Poster.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="peace-lab-cover.jpg" alt="Top of the Peace Lab conference poster" onerror="this.style.display='none'"></a>
       </div>
 
       <div class="pf-label">Why it matters</div>
@@ -162,7 +163,7 @@
           <a class="pf-btn" href="https://academia-connect-one.vercel.app/" target="_blank" rel="noopener">Open the prototype</a>
           <a class="pf-btn" href="academiaconnect-user-testing.pdf" target="_blank" rel="noopener">Read the testing report</a>
         </div>
-        <a class="pf-thumb" href="academiaconnect-user-testing.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="academiaconnect-testing.jpg" alt="Preview of the AcademiaConnect prototype"></a>
+        <a class="pf-thumb" href="https://academia-connect-one.vercel.app/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="academiaconnect-testing.jpg" alt="AcademiaConnect logo and name" onerror="this.style.display='none'"></a>
       </div>
 
       <div class="pf-label">Why it matters</div>
@@ -182,7 +183,7 @@
           <div class="pf-art-type">Magazine feature, pp. 21–23 of the issue. The PDF opens on NSDC&#x27;s site.</div>
           <a class="pf-btn" href="https://api1.nsdcindia.org/system/files/2025-07/07_March%202024_NSDC%20Connect_Innovation%20and%20HFIs.pdf" target="_blank" rel="noopener">Read the article</a>
         </div>
-        <a class="pf-thumb" href="https://api1.nsdcindia.org/system/files/2025-07/07_March%202024_NSDC%20Connect_Innovation%20and%20HFIs.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="nsdc-article.jpg" alt="Preview of the NSDC Connect article"></a>
+        <a class="pf-thumb" href="https://api1.nsdcindia.org/system/files/2025-07/07_March%202024_NSDC%20Connect_Innovation%20and%20HFIs.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="nsdc-article.jpg" alt="Header of the NSDC Connect article" onerror="this.style.display='none'"></a>
       </div>
 
       <div class="pf-label">Why it matters</div>

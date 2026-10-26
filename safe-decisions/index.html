@@ -1,28 +1,64 @@
-<!doctype html>
-<!-- 
-course package version: T2NkK18a
-rise_frontend sha: ac777813c344645eacc6f0f1423dc1d7cd86373a
-ai_scenario sha: 829a695709e52af51e2e6a9ee84e43035f909327
-learn_distribution_frontend sha: 6f05864a11e04685e2ec16e80185fe83fadc07a6
-mondrian sha: 509dd1d1a8df705ef9239013702b294fa83fac91
-sandbox sha: 42753f3391b109fa3788c525c22880445ab48325
- -->
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Making Safe Decisions in the Field</title>
-    
-    <script type="application/json" id="__CONFIG__">
-      {"remoteManifest":{"ai_scenario":{".js":["ai-scenario/entry.js"]},"learn_distribution_frontend":{".js":["learn_dist/entry.js"]},"mondrian":{".js":["mondrian/entry.js"]}},"assetTargetPrefixes":{"media":"assets","font":"lib/fonts"},"loadOnlyInLms":true,"surface":"lms-export","telemetry":{"uri":"https://metrics.articulate.com"}}
-    </script>
-    
-    <script src="lib/dist/ceac0120.js"></script>
-  </head>
-  <body>
-    <div id="app"></div>
-    
-      <script src="lib/rise/39bb3dab.js"></script>
-    
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making Safe Decisions in the Field</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #ffffff; }
+  iframe { display: block; width: 100%; height: 100%; border: 0; }
+</style>
+<script>
+  /* A minimal SCORM 2004 runtime, so the course runs on a website the way it
+     would inside an LMS. Nothing is saved or sent anywhere, and every visit
+     starts fresh. */
+  (function () {
+    var data = {
+      "cmi._version": "1.0",
+      "cmi.mode": "normal",
+      "cmi.credit": "credit",
+      "cmi.entry": "ab-initio",
+      "cmi.completion_status": "unknown",
+      "cmi.success_status": "unknown",
+      "cmi.learner_id": "guest",
+      "cmi.learner_name": "Guest",
+      "cmi.location": "",
+      "cmi.suspend_data": "",
+      "cmi.launch_data": "",
+      "cmi.total_time": "PT0H0M0S",
+      "cmi.time_limit_action": "continue,no message",
+      "cmi.interactions._count": "0",
+      "cmi.objectives._count": "0",
+      "cmi.comments_from_learner._count": "0",
+      "cmi.comments_from_lms._count": "0"
+    };
+    function updateCount(element) {
+      var match = /^cmi\.(interactions|objectives|comments_from_learner)\.(\d+)\./.exec(element);
+      if (!match) { return; }
+      var key = "cmi." + match[1] + "._count";
+      var next = parseInt(match[2], 10) + 1;
+      if (next > parseInt(data[key] || "0", 10)) { data[key] = String(next); }
+    }
+    window.API_1484_11 = {
+      Initialize: function () { return "true"; },
+      Terminate: function () { return "true"; },
+      Commit: function () { return "true"; },
+      GetValue: function (element) {
+        return Object.prototype.hasOwnProperty.call(data, element) ? data[element] : "";
+      },
+      SetValue: function (element, value) {
+        data[element] = String(value);
+        updateCount(element);
+        return "true";
+      },
+      GetLastError: function () { return "0"; },
+      GetErrorString: function () { return ""; },
+      GetDiagnostic: function () { return ""; }
+    };
+  })();
+</script>
+</head>
+<body>
+<iframe src="scormdriver/indexAPI.html" title="Making Safe Decisions in the Field" allow="autoplay; fullscreen"></iframe>
+</body>
 </html>
